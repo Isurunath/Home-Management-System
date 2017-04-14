@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 3, 2016 11:17:18 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Inventory.Book" table="book" catalog="sep" optimistic-lock="version">
+        <id name="itemCode" type="string">
+            <column name="ItemCode" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="100" not-null="true" />
+        </property>
+        <property name="location" type="string">
+            <column name="Location" length="100" not-null="true" />
+        </property>
+        <property name="qty" type="int">
+            <column name="Qty" not-null="true" />
+        </property>
+        <property name="price" type="string">
+            <column name="Price" length="100" not-null="true" />
+        </property>
+        <property name="user" type="string">
+            <column name="User" length="100" not-null="true" />
+        </property>
+        <property name="author" type="string">
+            <column name="Author" length="100" not-null="true" />
+        </property>
+        <property name="publisher" type="string">
+            <column name="Publisher" length="100" not-null="true" />
+        </property>
+        <property name="nameOfTheSeller" type="string">
+            <column name="NameOfTheSeller" length="100" not-null="true" />
+        </property>
+        <property name="returnDate" type="string">
+            <column name="ReturnDate" length="100" />
+        </property>
+        <property name="category" type="string">
+            <column name="Category" length="100" not-null="true" />
+        </property>
+        <property name="stream" type="string">
+            <column name="Stream" length="100" />
+        </property>
+        <property name="status" type="string">
+            <column name="Status" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

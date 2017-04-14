@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 27, 2016 11:04:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="sep" name="model.finance.Incomedetails" table="incomedetails">
+    <id name="incomeId" type="java.lang.Integer">
+      <column name="IncomeID"/>
+      <generator class="identity"/>
+    </id>
+    <property name="incomeSource" type="string">
+      <column length="50" name="IncomeSource" not-null="true"/>
+    </property>
+    <property name="description" type="string">
+      <column length="300" name="Description" not-null="true"/>
+    </property>
+    <property name="date" type="date">
+      <column length="10" name="Date" not-null="true"/>
+    </property>
+    <property name="amount" type="string">
+      <column length="20" name="Amount" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

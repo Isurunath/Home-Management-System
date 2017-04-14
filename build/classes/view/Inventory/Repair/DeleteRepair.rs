@@ -1,0 +1,17 @@
+View.Inventory.Repair.DeleteRepair$1
+View.Inventory.Repair.DeleteRepair$15
+View.Inventory.Repair.DeleteRepair$16
+View.Inventory.Repair.DeleteRepair$13
+View.Inventory.Repair.DeleteRepair$14
+View.Inventory.Repair.DeleteRepair$5
+View.Inventory.Repair.DeleteRepair$4
+View.Inventory.Repair.DeleteRepair$3
+View.Inventory.Repair.DeleteRepair$2
+View.Inventory.Repair.DeleteRepair$11
+View.Inventory.Repair.DeleteRepair$12
+View.Inventory.Repair.DeleteRepair$10
+View.Inventory.Repair.DeleteRepair$9
+View.Inventory.Repair.DeleteRepair$8
+View.Inventory.Repair.DeleteRepair$7
+View.Inventory.Repair.DeleteRepair$6
+View.Inventory.Repair.DeleteRepair

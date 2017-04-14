@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    
+    <query name="CONTACT_LoadContactTable">
+        <![CDATA[from Usercontact]]>
+    </query>
+    
+    <query name="CONTACT_LoadSearchedContactTable">
+        <![CDATA[from Usercontact where name = :name]]>
+    </query>
+
+    <query name="Contact_DeleteContactTable">
+        <![CDATA[delete from Usercontact where contactId = :ID]]>
+    </query>
+    
+    <query name="CONTACT_SearchContactTable">
+        <![CDATA[from Usercontact c where c.name like :name]]> 
+    </query>
+    
+    <query name="CONTACT_SearchInGroup">
+        <![CDATA[from Usercontact c where c.name like :name and c.groupName = :group]]> 
+    </query>
+           
+    <query name="CONTACT_SearchContactTableByGroup">
+        <![CDATA[from Usercontact c where c.groupName = :group]]> 
+    </query>
+
+    
+    <query name="USER_Login">
+        <![CDATA[from Userregister where username = :username]]> 
+    </query>
+    
+    <query name="USER_LoginCheckUsername">
+        <![CDATA[select count(*) from Userregister where username = :username]]>      
+    </query>
+    
+    <query name="USER_LoadDocAppointmentTable">
+        <![CDATA[from Userdoctorapp]]>
+    </query>
+    
+    <query name="USER_DeleteDocAppointmentTable">
+        <![CDATA[delete from Userdoctorapp where appId = :ID]]>
+    </query>
+    
+    <query name="USER_LoadTodayAppointments">
+        <![CDATA[from Userdoctorapp where date = CURRENT_DATE()]]>
+    </query>
+    
+    <query name="USER_LoadHealthInfoTable">
+        <![CDATA[from Userhealthinfo]]>
+    </query>
+    
+    <query name="USER_DeleteHealthInfoTable">
+        <![CDATA[delete from Userhealthinfo where memberId = :ID]]>
+    </query>
+    
+    <query name="USER_CountMembername">
+        <![CDATA[select count(*) from Userhealthinfo where memberName = :memberName]]>      
+    </query>
+    
+    <query name="USER_LoadVehicleServiceTable">
+        <![CDATA[from Uservehicle]]>
+    </query>
+    
+    <query name="USER_DeleteVehicleServiceTable">
+        <![CDATA[delete from Uservehicle where serviceId = :ID]]>
+    </query>
+    
+    <query name="USER_CountUsername">
+        <![CDATA[select count(*) from Userinfo where username = :username]]>      
+    </query>
+
+    <query name="USER_LoadUserInfo">
+        <![CDATA[from Userinfo where username = :username]]>
+    </query>
+
+</hibernate-mapping>

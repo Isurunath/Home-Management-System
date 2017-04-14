@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2016 4:10:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.user.Userhealthinfo" table="userhealthinfo" catalog="sep">
+        <id name="memberId" type="java.lang.Integer">
+            <column name="memberID" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="memberName" type="string">
+            <column name="memberName" length="50" not-null="true" />
+        </property>
+        <property name="bloodGroup" type="string">
+            <column name="bloodGroup" length="5" not-null="true" />
+        </property>
+        <property name="weight" type="string">
+            <column name="weight" length="3" not-null="true" />
+        </property>
+        <property name="height" type="string">
+            <column name="height" length="3" not-null="true" />
+        </property>
+        <property name="allergies" type="string">
+            <column name="allergies" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

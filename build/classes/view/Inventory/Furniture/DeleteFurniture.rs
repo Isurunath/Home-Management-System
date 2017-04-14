@@ -1,0 +1,17 @@
+View.Inventory.Furniture.DeleteFurniture$5
+View.Inventory.Furniture.DeleteFurniture$4
+View.Inventory.Furniture.DeleteFurniture$7
+View.Inventory.Furniture.DeleteFurniture$6
+View.Inventory.Furniture.DeleteFurniture$9
+View.Inventory.Furniture.DeleteFurniture$8
+View.Inventory.Furniture.DeleteFurniture$16
+View.Inventory.Furniture.DeleteFurniture$15
+View.Inventory.Furniture.DeleteFurniture$1
+View.Inventory.Furniture.DeleteFurniture$3
+View.Inventory.Furniture.DeleteFurniture$2
+View.Inventory.Furniture.DeleteFurniture
+View.Inventory.Furniture.DeleteFurniture$10
+View.Inventory.Furniture.DeleteFurniture$12
+View.Inventory.Furniture.DeleteFurniture$11
+View.Inventory.Furniture.DeleteFurniture$14
+View.Inventory.Furniture.DeleteFurniture$13

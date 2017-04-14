@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 3, 2016 11:17:18 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Inventory.Technician" table="technician" catalog="sep" optimistic-lock="version">
+        <id name="technicianId" type="string">
+            <column name="TechnicianID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="100" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="100" not-null="true" />
+        </property>
+        <property name="mobileNo" type="java.lang.Long">
+            <column name="MobileNo" precision="10" scale="0" />
+        </property>
+        <property name="officeNo" type="java.lang.Long">
+            <column name="OfficeNo" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2016 4:10:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.user.Usercontact" table="usercontact" catalog="sep">
+        <id name="contactId" type="java.lang.Integer">
+            <column name="ContactID" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="groupName" type="string">
+            <column name="GroupName" length="30" />
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="100" not-null="true" />
+        </property>
+        <property name="companyName" type="string">
+            <column name="CompanyName" length="50" />
+        </property>
+        <property name="dob" type="date">
+            <column name="DOB" length="10" />
+        </property>
+        <property name="telephone1" type="string">
+            <column name="Telephone1" length="10" />
+        </property>
+        <property name="telephone2" type="string">
+            <column name="Telephone2" length="10" />
+        </property>
+        <property name="mobile1" type="string">
+            <column name="Mobile1" length="10" />
+        </property>
+        <property name="mobile2" type="string">
+            <column name="Mobile2" length="10" />
+        </property>
+        <property name="email1" type="string">
+            <column name="Email1" length="200" />
+        </property>
+        <property name="email2" type="string">
+            <column name="Email2" length="200" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="300" />
+        </property>
+    </class>
+</hibernate-mapping>

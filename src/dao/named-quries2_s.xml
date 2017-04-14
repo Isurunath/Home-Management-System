@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <query name="ACCOUNT_LoadAccountTable">
+        <![CDATA[from Account]]>
+    </query>
+    
+    <query name="ACCOUNT_loadCombolist">
+        <![CDATA[select a.accNo from Account a]]>
+    </query>
+    
+    <query name="ACCOUNT_deleteAccount">
+        <![CDATA[delete Account where accNo = :aNo]]>
+    </query>
+    
+    <query name="ACCOUNT_searchAccount">
+        <![CDATA[from Account a where a.accNo = :searchAccount]]>
+    </query> 
+    
+    <query name="ACCOUNT_countAccountNo">
+        <![CDATA[select count(*) from Account where accNo = :Accid]]>
+    </query>
+    
+    <query name="ACCOUNT_loadAccountNo">
+        <![CDATA[from Creditcards where cardNo = :Accid]]>
+    </query>
+    
+    <query name="CREDITCARDEXPENSE_loadCombolist">
+        <![CDATA[select c.cardNo from Creditcardexpenses c]]>
+    </query>
+    
+    <query name="CREDITCARDEXPENSE_LoadExpenseTable">
+        <![CDATA[from Creditcardexpenses]]>
+    </query>
+    
+    <query name="CREDITCARDEXPENSE_deleteExpense">
+        <![CDATA[delete Creditcardexpenses where cardNo = :CreditID]]>
+    </query>
+    
+    <query name="CREDITCARDEXPENSE_searchExpense">
+        <![CDATA[from Creditcardexpenses c where c.cardNo = :CreditId]]>
+    </query> 
+        
+    <query name="BILLS_LoadBillsTable">
+        <![CDATA[from Bills]]>
+    </query>
+    
+    <query name="BILLS_loadCombolist">
+        <![CDATA[select b.billNo from Bills b]]>
+    </query>
+    
+    <query name="BILLS_deleteBlls">
+        <![CDATA[delete Bills where billNo = :BillNo]]>
+    </query>
+    
+    <query name="BILLS_searchBills">
+        <![CDATA[from Bills b where b.billNo = :billNo]]>
+    </query>
+    
+    <query name="BILLS_countBillNo">
+        <![CDATA[select count(*) from Bills where billNo = :Billid]]>
+    </query>
+    
+    <query name="bill_notification">
+        <![CDATA[from Bills where date = CURRENT_DATE()]]>
+    </query>
+    
+    <query name="CASHEXPENSE_LoadExpenseTable">
+        <![CDATA[from Cashexpenses]]>
+    </query>  
+       
+    <query name="CASHEXPENSE_deleteExpense">
+        <![CDATA[delete Cashexpenses where cashExpenseId = :CashID]]>
+    </query>
+    
+    <query name="CASHEXPENSE_searchExpense">
+        <![CDATA[from Cashexpenses ce where ce.date = :date]]>
+    </query>
+    
+     <query name="DEPOSIT_LoadDepositTable">
+        <![CDATA[from Deposit]]>
+    </query>
+    
+    <query name="DEPOSIT_loadCombolist">
+        <![CDATA[select d.accNo from Deposit d]]>
+    </query>
+    
+    <query name="DEPOSIT_deleteDeposit">
+        <![CDATA[delete Deposit where accNo = :depID]]>
+    </query>
+    
+    <query name="DEPOSIT_searchDeposit">
+        <![CDATA[from Deposit d where d.accNo = :depId]]>
+    </query>
+    
+    <query name="INCOME_LoadIncomeTable">
+        <![CDATA[from Incomedetails]]>
+    </query>
+    
+    <query name="INCOME_loadCombolist">
+        <![CDATA[select i.incomeSource from Incomedetails i]]>
+    </query>
+    
+    <query name="INCOME_deleteIncome">
+        <![CDATA[delete Incomedetails where incomeId = :Iid]]>
+    </query>
+    
+    <query name="INCOME_searchIncome">
+        <![CDATA[from Incomedetails i where i.incomeSource= :iID]]>
+    </query>
+    
+    <query name="SALARY_LoadSalaryTable">
+        <![CDATA[from Salary]]>
+    </query>
+            
+    <query name="SALARY_deleteSalary">
+        <![CDATA[delete Salary where salaryId = :sal]]>
+    </query>
+    
+    <query name="SALARY_searchSalary">
+        <![CDATA[from Salary s where s.month = :searchSalary]]>
+    </query>
+   
+    <query name="WITHDRAW_LoadWithdrawTable">
+        <![CDATA[from Withdrawal]]>
+    </query>
+    
+    <query name="WITHDRAW_loadCombolist">
+        <![CDATA[select w.accNo from Withdrawal w]]>
+    </query>
+    
+    <query name="WITHDRAW_deleteWithdraw">
+        <![CDATA[delete Withdrawal where accNo = :witID]]>
+    </query>
+    
+    <query name="WITHDRAW_searchWithdraw">
+        <![CDATA[from Withdrawal w where w.accNo = :WitId]]>
+    </query> 
+    
+    <query name="CREDITCARDS_LoadCreditCardsTable">
+        <![CDATA[from Creditcards]]>
+    </query>
+    
+    <query name="CREDITCARDS_loadCombolist">
+        <![CDATA[select c.cardNo from Creditcards c]]>
+    </query>
+    
+    <query name="CREDITCARDS_deleteCreditcard">
+        <![CDATA[delete Creditcards where cardNo = :CardID]]>
+    </query>
+    
+    <query name="CREDITCARDS_searchCreditcard">
+        <![CDATA[from Creditcards c where c.cardNo = :CardId]]>
+    </query>
+    
+    <query name="CREDITCARDS_countCardNo">
+        <![CDATA[select count(*) from Creditcards where cardNo = :Cardid]]>
+    </query>
+    
+    <query name="CREDITCARDS_loadCardNo">
+        <![CDATA[from Creditcards where cardNo = :Cardid]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_LoadPaymentTable">
+        <![CDATA[from Creditcardpayments]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_loadCombolist">
+        <![CDATA[select p.cardNo from Creditcardpayments p]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_deletePayment">
+        <![CDATA[delete Creditcards where cardNo = :PaymentID]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_searchPayment">
+        <![CDATA[from Creditcardpayments p where p.cardNo = :PaymentId]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_loadCardPayment">
+        <![CDATA[from Creditcardpayments where cardNo = :CardID]]>
+    </query>
+
+</hibernate-mapping>

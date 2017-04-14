@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2016 4:10:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.user.Userregister" table="userregister" catalog="sep">
+        <id name="username" type="string">
+            <column name="Username" length="15" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="password" type="string">
+            <column name="Password" length="15" not-null="true" />
+        </property>
+        <property name="seqQue" type="string">
+            <column name="SeqQue" length="200" />
+        </property>
+        <property name="answer" type="string">
+            <column name="Answer" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

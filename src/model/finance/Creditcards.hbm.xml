@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 27, 2016 11:04:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="sep" name="model.finance.Creditcards" table="creditcards">
+    <id name="cardId" type="java.lang.Integer">
+      <column name="CardID"/>
+      <generator class="identity"/>
+    </id>
+    <property name="cardNo" type="string">
+      <column length="20" name="CardNo" not-null="true"/>
+    </property>
+    <property name="cardHolderName" type="string">
+      <column length="250" name="CardHolderName" not-null="true"/>
+    </property>
+    <property name="cardType" type="string">
+      <column length="30" name="CardType" not-null="true"/>
+    </property>
+    <property name="issuedDate" type="date">
+      <column length="10" name="IssuedDate" not-null="true"/>
+    </property>
+    <property name="expiryDate" type="date">
+      <column length="10" name="ExpiryDate" not-null="true"/>
+    </property>
+    <property name="cardHoldingBank" type="string">
+      <column length="50" name="CardHoldingBank" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

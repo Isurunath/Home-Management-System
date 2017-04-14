@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2016 3:39:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.event.Eventbeverages" table="eventbeverages" catalog="sep">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="20" not-null="true" />
+        </property>
+        <property name="catagory" type="string">
+            <column name="Catagory" length="20" not-null="true" />
+        </property>
+        <property name="price" type="string">
+            <column name="Price" length="10" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="50" />
+        </property>
+        <property name="contact" type="string">
+            <column name="Contact" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

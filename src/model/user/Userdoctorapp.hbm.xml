@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2016 4:10:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.user.Userdoctorapp" table="userdoctorapp" catalog="sep">
+        <id name="appId" type="java.lang.Integer">
+            <column name="appID" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="memberName" type="string">
+            <column name="memberName" length="100" not-null="true" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="time" type="string">
+            <column name="time" length="20" />
+        </property>
+        <property name="docName" type="string">
+            <column name="docName" length="100" />
+        </property>
+        <property name="venue" type="string">
+            <column name="venue" length="50" />
+        </property>
+        <property name="otherDetails" type="string">
+            <column name="otherDetails" length="300" />
+        </property>
+    </class>
+</hibernate-mapping>

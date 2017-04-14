@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sep?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory</property>
+    <mapping resource="model/event/Eventcontact.hbm.xml"/>
+    <mapping resource="model/event/EventItems.hbm.xml"/>
+    <mapping resource="model/event/EventPlan.hbm.xml"/>
+    <mapping resource="dao/named-quries2.xml"/>
+    <mapping resource="model/event/Eventfood.hbm.xml"/>
+    <mapping resource="model/event/Eventbeverages.hbm.xml"/>
+    <mapping resource="model/event/Eventncontact.hbm.xml"/>
+    <mapping resource="model/event/Eventnitems.hbm.xml"/>
+    <mapping resource="model/event/Eventnfood.hbm.xml"/>
+    <mapping resource="model/event/Eventnbev.hbm.xml"/>
+    <mapping resource="model/plan/Homeplan.hbm.xml"/>
+    
+    <mapping resource="model/user/Usercontact.hbm.xml"/>
+    <mapping resource="model/user/Userregister.hbm.xml"/>
+    <mapping resource="model/user/Userdoctorapp.hbm.xml"/>
+    <mapping resource="model/user/Userhealthinfo.hbm.xml"/>
+    <mapping resource="model/user/Uservehicle.hbm.xml"/>
+    <mapping resource="model/user/Userinfo.hbm.xml"/>
+
+    <mapping resource="model/finance/Creditcardexpenses.hbm.xml"/>
+    <mapping resource="model/finance/Account.hbm.xml"/>
+    <mapping resource="model/finance/Deposit.hbm.xml"/>
+    <mapping resource="model/finance/Cashexpenses.hbm.xml"/>
+    <mapping resource="model/finance/Incomedetails.hbm.xml"/>
+    <mapping resource="model/finance/Bills.hbm.xml"/>
+    <mapping resource="model/finance/Withdrawal.hbm.xml"/>
+    <mapping resource="model/finance/Creditcardpayments.hbm.xml"/>
+    <mapping resource="model/finance/Creditcards.hbm.xml"/>
+    <mapping resource="model/finance/Salary.hbm.xml"/>
+    
+    <mapping resource="model/food/Homefood.hbm.xml"/>
+    <mapping resource="model/room/Homerooms.hbm.xml"/>
+    
+    <mapping resource="model/Inventory/Garmentandaccesory.hbm.xml"/>
+    <mapping resource="model/Inventory/Repair.hbm.xml"/>
+    <mapping resource="model/Inventory/Otheritem.hbm.xml"/>
+    <mapping resource="model/Inventory/Furniture.hbm.xml"/>
+    <mapping resource="model/Inventory/ElectricalGoods.hbm.xml"/>
+    <mapping resource="model/Inventory/Book.hbm.xml"/>
+    <mapping resource="model/Inventory/Tool.hbm.xml"/>
+    <mapping resource="model/Inventory/Deleteditems.hbm.xml"/>
+    <mapping resource="model/Inventory/Technician.hbm.xml"/>
+    <mapping resource="model/Inventory/Medicine.hbm.xml"/>
+
+    
+  </session-factory>
+</hibernate-configuration>

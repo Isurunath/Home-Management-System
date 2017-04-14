@@ -1,0 +1,13 @@
+View.Inventory.Tool.DeleteTool$9
+View.Inventory.Tool.DeleteTool$8
+View.Inventory.Tool.DeleteTool$7
+View.Inventory.Tool.DeleteTool$6
+View.Inventory.Tool.DeleteTool$12
+View.Inventory.Tool.DeleteTool$11
+View.Inventory.Tool.DeleteTool$10
+View.Inventory.Tool.DeleteTool
+View.Inventory.Tool.DeleteTool$1
+View.Inventory.Tool.DeleteTool$5
+View.Inventory.Tool.DeleteTool$4
+View.Inventory.Tool.DeleteTool$3
+View.Inventory.Tool.DeleteTool$2

@@ -1,0 +1,14 @@
+View.Inventory.Medicine.DeleteMedicine$8
+View.Inventory.Medicine.DeleteMedicine$12
+View.Inventory.Medicine.DeleteMedicine$9
+View.Inventory.Medicine.DeleteMedicine$11
+View.Inventory.Medicine.DeleteMedicine$6
+View.Inventory.Medicine.DeleteMedicine$10
+View.Inventory.Medicine.DeleteMedicine$7
+View.Inventory.Medicine.DeleteMedicine
+View.Inventory.Medicine.DeleteMedicine$13
+View.Inventory.Medicine.DeleteMedicine$4
+View.Inventory.Medicine.DeleteMedicine$5
+View.Inventory.Medicine.DeleteMedicine$2
+View.Inventory.Medicine.DeleteMedicine$3
+View.Inventory.Medicine.DeleteMedicine$1

@@ -1,0 +1,17 @@
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$1
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$2
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$5
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$6
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$3
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$4
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$16
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$9
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$7
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$8
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$11
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$10
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$15
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$14
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$13
+View.Inventory.GarmentAndAccessory.UpdateGarmentAndAccesory$12

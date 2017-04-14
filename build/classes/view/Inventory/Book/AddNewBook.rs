@@ -1,0 +1,14 @@
+View.Inventory.Book.AddNewBook$2
+View.Inventory.Book.AddNewBook$3
+View.Inventory.Book.AddNewBook$4
+View.Inventory.Book.AddNewBook$5
+View.Inventory.Book.AddNewBook$6
+View.Inventory.Book.AddNewBook
+View.Inventory.Book.AddNewBook$7
+View.Inventory.Book.AddNewBook$8
+View.Inventory.Book.AddNewBook$9
+View.Inventory.Book.AddNewBook$13
+View.Inventory.Book.AddNewBook$11
+View.Inventory.Book.AddNewBook$12
+View.Inventory.Book.AddNewBook$1
+View.Inventory.Book.AddNewBook$10

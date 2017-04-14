@@ -1,0 +1,15 @@
+View.Inventory.Furniture.AddNewFurniture$1
+View.Inventory.Furniture.AddNewFurniture$3
+View.Inventory.Furniture.AddNewFurniture$2
+View.Inventory.Furniture.AddNewFurniture$5
+View.Inventory.Furniture.AddNewFurniture$4
+View.Inventory.Furniture.AddNewFurniture$7
+View.Inventory.Furniture.AddNewFurniture$6
+View.Inventory.Furniture.AddNewFurniture$9
+View.Inventory.Furniture.AddNewFurniture$8
+View.Inventory.Furniture.AddNewFurniture
+View.Inventory.Furniture.AddNewFurniture$11
+View.Inventory.Furniture.AddNewFurniture$12
+View.Inventory.Furniture.AddNewFurniture$13
+View.Inventory.Furniture.AddNewFurniture$14
+View.Inventory.Furniture.AddNewFurniture$10

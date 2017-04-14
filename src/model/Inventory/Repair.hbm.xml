@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 3, 2016 11:17:18 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Inventory.Repair" table="repair" catalog="sep" optimistic-lock="version">
+        <id name="repairId" type="string">
+            <column name="RepairID" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="itemCode" type="string">
+            <column name="ItemCode" length="100" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="100" not-null="true" />
+        </property>
+        <property name="techicianId" type="string">
+            <column name="TechicianID" length="100" not-null="true" />
+        </property>
+        <property name="techName" type="string">
+            <column name="TechName" length="100" not-null="true" />
+        </property>
+        <property name="dateOfRepairing" type="string">
+            <column name="DateOfRepairing" length="100" not-null="true" />
+        </property>
+        <property name="payment" type="double">
+            <column name="Payment" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="Description" length="100" />
+        </property>
+        <property name="category" type="string">
+            <column name="Category" length="100" not-null="true" />
+        </property>
+        <property name="returnDate" type="string">
+            <column name="ReturnDate" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

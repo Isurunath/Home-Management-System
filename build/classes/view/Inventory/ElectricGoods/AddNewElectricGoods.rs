@@ -1,0 +1,17 @@
+View.Inventory.ElectricGoods.AddNewElectricGoods$3
+View.Inventory.ElectricGoods.AddNewElectricGoods$2
+View.Inventory.ElectricGoods.AddNewElectricGoods
+View.Inventory.ElectricGoods.AddNewElectricGoods$5
+View.Inventory.ElectricGoods.AddNewElectricGoods$4
+View.Inventory.ElectricGoods.AddNewElectricGoods$7
+View.Inventory.ElectricGoods.AddNewElectricGoods$6
+View.Inventory.ElectricGoods.AddNewElectricGoods$9
+View.Inventory.ElectricGoods.AddNewElectricGoods$8
+View.Inventory.ElectricGoods.AddNewElectricGoods$1
+View.Inventory.ElectricGoods.AddNewElectricGoods$10
+View.Inventory.ElectricGoods.AddNewElectricGoods$12
+View.Inventory.ElectricGoods.AddNewElectricGoods$11
+View.Inventory.ElectricGoods.AddNewElectricGoods$14
+View.Inventory.ElectricGoods.AddNewElectricGoods$13
+View.Inventory.ElectricGoods.AddNewElectricGoods$16
+View.Inventory.ElectricGoods.AddNewElectricGoods$15

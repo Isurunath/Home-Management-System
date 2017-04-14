@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+     <query name="EVENT_loadCombolist">
+        <![CDATA[select e.eventCatagory from EventItems e group by e.eventCatagory]]>
+    </query>
+    
+    <query name="EVENT_deleteItems">
+        <![CDATA[delete from EventItems where id = :ID]]>
+    </query>
+    
+    <query name="EVENT_LoadItemTable_1">
+        <![CDATA[from EventItems]]>
+    </query>
+    
+    <query name="EVENT_LoadItemTable_2">
+        <![CDATA[from EventItems where EventCatagory = :catagory]]>
+    </query>
+    
+    <query name="EVENT_loadItemList_1">
+        <![CDATA[select e.itemName from EventItems e]]>
+    </query>
+    
+    <query name="EVENT_loadItemList_2">
+        <![CDATA[select e.itemName from EventItems e where e.eventCatagory = :catagory]]>
+    </query>
+    
+    <query name="EVENT_Contact_loadCombolist">
+        <![CDATA[select g.group from Eventcontact g group by g.group]]>
+    </query>
+    
+    <query name="EVENT_Contact_LoadItemTable_1">
+        <![CDATA[from Eventcontact]]>
+    </query>
+    
+    <query name="EVENT_Contact_LoadItemTable_2">
+        <![CDATA[from Eventcontact where group = :catagory]]>
+    </query>
+    
+    <query name="Event_LoadSearchTable_ALL">
+        <![CDATA[from EventPlan]]>
+    </query>
+    
+    <query name="Event_LoadSearchTable_UPCOMING">
+        <![CDATA[from EventPlan where Date > CURRENT_DATE()]]>
+    </query>
+    
+    <query name="Event_LoadSearchTable_LATE">
+        <![CDATA[from EventPlan where Date < CURRENT_DATE()]]>
+    </query>
+    
+    <query name="Event_LoadSearchTable_TODAY">
+        <![CDATA[from EventPlan where Date = CURRENT_DATE()]]>
+    </query>
+    
+    <query name="EVENT_delete">
+        <![CDATA[delete from EventPlan where id = :ID]]>
+    </query>
+    
+    <query name="EVENT_load_Food_Combo">
+        <![CDATA[select e.menuName from Eventfood e group by e.menuName]]>
+    </query>
+    
+    <query name="EVENT_load_Bev_Combo">
+        <![CDATA[select e.catagory from Eventbeverages e group by e.catagory]]>
+    </query>
+    
+    <query name="EVENT_loadFoodList_1">
+        <![CDATA[select e.itemName from Eventfood e]]>
+    </query>
+    
+    <query name="EVENT_loadFoodList_2">
+        <![CDATA[select e.itemName from Eventfood e where e.menuName = :catagory]]>
+    </query>
+    
+    <query name="EVENT_loadBevList_1">
+        <![CDATA[select e.name from Eventbeverages e]]>
+    </query>
+    
+    <query name="EVENT_loadBevList_2">
+        <![CDATA[select e.name from Eventbeverages e where e.catagory = :catagory]]>
+    </query>
+    
+    <query name="EVENT_LoadFoodTable_1">
+        <![CDATA[from Eventfood]]>
+    </query>
+    
+    <query name="EVENT_LoadFoodTable_2">
+        <![CDATA[from Eventfood where menuName = :catagory]]>
+    </query>
+    
+    <query name="EVENT_LoadBevTable_1">
+        <![CDATA[from Eventbeverages]]>
+    </query>
+    
+    <query name="EVENT_LoadBevTable_2">
+        <![CDATA[from Eventbeverages where catagory = :catagory]]>
+    </query>
+    
+    <query name="EVENT_Food_delete">
+        <![CDATA[delete from Eventfood where id = :ID]]>
+    </query>
+    
+    <query name="EVENT_Bev_delete">
+        <![CDATA[delete from Eventbeverages where id = :ID]]>
+    </query>
+    
+    <query name="update_getEvent">
+        <![CDATA[from EventPlan where EventID = :ID]]>
+    </query>
+    
+    <query name="update_getContactTable">
+        <![CDATA[from Eventncontact where eventID = :ID]]>
+    </query>
+    
+    <query name="update_getItemTable">
+        <![CDATA[from Eventnitems where eventID = :ID]]>
+    </query>
+    
+    <query name="update_getFoodTable">
+        <![CDATA[from Eventnfood where eventID = :ID]]>
+    </query>
+    
+    <query name="update_getBevTable">
+        <![CDATA[from Eventnbev where eventID = :ID]]>
+    </query>
+    
+    <query name="EVENT_ParticipantTable_delete">
+        <![CDATA[delete from Eventncontact where eventID = :ID]]>
+    </query>
+    
+    <query name="EVENT_ItemTable_delete">
+        <![CDATA[delete from Eventnitems where eventID = :ID]]>
+    </query>
+    
+    <query name="EVENT_FoodTable_delete">
+        <![CDATA[delete from Eventnfood where eventID = :ID]]>
+    </query>
+    
+    <query name="EVENT_BevTable_delete">
+        <![CDATA[delete from Eventnbev where eventID = :ID]]>
+    </query>
+    
+    <query name="event_notification">
+        <![CDATA[from EventPlan where Date = CURRENT_DATE()]]>
+    </query>
+    
+    <query name="load_plan">
+        <![CDATA[from Homeplan]]>
+    </query>
+    
+    
+    <!-- ***********************finance ******************************* -->
+    
+    <query name="ACCOUNT_LoadAccountTable">
+        <![CDATA[from Account]]>
+    </query>
+    
+    <query name="ACCOUNT_loadCombolist">
+        <![CDATA[select a.accNo from Account a]]>
+    </query>
+    
+    <query name="ACCOUNT_deleteAccount">
+        <![CDATA[delete Account where accNo = :aNo]]>
+    </query>
+    
+    <query name="ACCOUNT_searchAccount">
+        <![CDATA[from Account a where a.accNo = :searchAccount]]>
+    </query> 
+    
+    <query name="ACCOUNT_countAccountNo">
+        <![CDATA[select count(*) from Account where accNo = :Accid]]>
+    </query>
+    
+    <query name="ACCOUNT_loadAccountNo">
+        <![CDATA[from Creditcards where cardNo = :Accid]]>
+    </query>
+    
+    <query name="CREDITCARDEXPENSE_loadCombolist">
+        <![CDATA[select c.cardNo from Creditcardexpenses c]]>
+    </query>
+    
+    <query name="CREDITCARDEXPENSE_LoadExpenseTable">
+        <![CDATA[from Creditcardexpenses]]>
+    </query>
+    
+    <query name="CREDITCARDEXPENSE_deleteExpense">
+        <![CDATA[delete Creditcardexpenses where cardNo = :CreditID]]>
+    </query>
+    
+    <query name="CREDITCARDEXPENSE_searchExpense">
+        <![CDATA[from Creditcardexpenses c where c.cardNo = :CreditId]]>
+    </query> 
+        
+    <query name="BILLS_LoadBillsTable">
+        <![CDATA[from Bills]]>
+    </query>
+    
+    <query name="BILLS_loadCombolist">
+        <![CDATA[select b.billNo from Bills b]]>
+    </query>
+    
+    <query name="BILLS_deleteBlls">
+        <![CDATA[delete Bills where billNo = :BillNo]]>
+    </query>
+    
+    <query name="BILLS_searchBills">
+        <![CDATA[from Bills b where b.billNo = :billNo]]>
+    </query>
+    
+    <query name="BILLS_countBillNo">
+        <![CDATA[select count(*) from Bills where billNo = :Billid]]>
+    </query>
+    
+    <query name="bill_notification">
+        <![CDATA[from Bills where date = CURRENT_DATE()]]>
+    </query>
+    
+    <query name="CASHEXPENSE_LoadExpenseTable">
+        <![CDATA[from Cashexpenses]]>
+    </query>  
+       
+    <query name="CASHEXPENSE_deleteExpense">
+        <![CDATA[delete Cashexpenses where cashExpenseId = :CashID]]>
+    </query>
+    
+    <query name="CASHEXPENSE_searchExpense">
+        <![CDATA[from Cashexpenses ce where ce.date = :date]]>
+    </query>
+    
+     <query name="DEPOSIT_LoadDepositTable">
+        <![CDATA[from Deposit]]>
+    </query>
+    
+    <query name="DEPOSIT_loadCombolist">
+        <![CDATA[select d.accNo from Deposit d]]>
+    </query>
+    
+    <query name="DEPOSIT_deleteDeposit">
+        <![CDATA[delete Deposit where accNo = :depID]]>
+    </query>
+    
+    <query name="DEPOSIT_searchDeposit">
+        <![CDATA[from Deposit d where d.accNo = :depId]]>
+    </query>
+    
+    <query name="INCOME_LoadIncomeTable">
+        <![CDATA[from Incomedetails]]>
+    </query>
+    
+    <query name="INCOME_loadCombolist">
+        <![CDATA[select i.incomeSource from Incomedetails i]]>
+    </query>
+    
+    <query name="INCOME_deleteIncome">
+        <![CDATA[delete Incomedetails where incomeId = :Iid]]>
+    </query>
+    
+    <query name="INCOME_searchIncome">
+        <![CDATA[from Incomedetails i where i.incomeSource= :iID]]>
+    </query>
+    
+    <query name="SALARY_LoadSalaryTable">
+        <![CDATA[from Salary]]>
+    </query>
+            
+    <query name="SALARY_deleteSalary">
+        <![CDATA[delete Salary where salaryId = :sal]]>
+    </query>
+    
+    <query name="SALARY_searchSalary">
+        <![CDATA[from Salary s where s.month = :searchSalary]]>
+    </query>
+   
+    <query name="WITHDRAW_LoadWithdrawTable">
+        <![CDATA[from Withdrawal]]>
+    </query>
+    
+    <query name="WITHDRAW_loadCombolist">
+        <![CDATA[select w.accNo from Withdrawal w]]>
+    </query>
+    
+    <query name="WITHDRAW_deleteWithdraw">
+        <![CDATA[delete Withdrawal where accNo = :witID]]>
+    </query>
+    
+    <query name="WITHDRAW_searchWithdraw">
+        <![CDATA[from Withdrawal w where w.accNo = :WitId]]>
+    </query> 
+    
+    <query name="CREDITCARDS_LoadCreditCardsTable">
+        <![CDATA[from Creditcards]]>
+    </query>
+    
+    <query name="CREDITCARDS_loadCombolist">
+        <![CDATA[select c.cardNo from Creditcards c]]>
+    </query>
+    
+    <query name="CREDITCARDS_deleteCreditcard">
+        <![CDATA[delete Creditcards where cardNo = :CardID]]>
+    </query>
+    
+    <query name="CREDITCARDS_searchCreditcard">
+        <![CDATA[from Creditcards c where c.cardNo = :CardId]]>
+    </query>
+    
+    <query name="CREDITCARDS_countCardNo">
+        <![CDATA[select count(*) from Creditcards where cardNo = :Cardid]]>
+    </query>
+    
+    <query name="CREDITCARDS_loadCardNo">
+        <![CDATA[from Creditcards where cardNo = :Cardid]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_LoadPaymentTable">
+        <![CDATA[from Creditcardpayments]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_loadCombolist">
+        <![CDATA[select p.cardNo from Creditcardpayments p]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_deletePayment">
+        <![CDATA[delete Creditcards where cardNo = :PaymentID]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_searchPayment">
+        <![CDATA[from Creditcardpayments p where p.cardNo = :PaymentId]]>
+    </query>
+    
+    <query name="CREDITCARDPAYMENT_loadCardPayment">
+        <![CDATA[from Creditcardpayments where cardNo = :CardID]]>
+    </query>
+    
+    
+    <!-- **************************** user *************************** -->
+    
+    <query name="CONTACT_LoadContactTable">
+        <![CDATA[from Usercontact]]>
+    </query>
+    
+    <query name="CONTACT_LoadSearchedContactTable">
+        <![CDATA[from Usercontact where name = :name]]>
+    </query>
+
+    <query name="Contact_DeleteContactTable">
+        <![CDATA[delete from Usercontact where contactId = :ID]]>
+    </query>
+    
+    <query name="CONTACT_SearchContactTable">
+        <![CDATA[from Usercontact c where c.name like :name]]> 
+    </query>
+    
+    <query name="CONTACT_SearchInGroup">
+        <![CDATA[from Usercontact c where c.name like :name and c.groupName = :group]]> 
+    </query>
+           
+    <query name="CONTACT_SearchContactTableByGroup">
+        <![CDATA[from Usercontact c where c.groupName = :group]]> 
+    </query>
+
+    
+    <query name="USER_Login">
+        <![CDATA[from Userregister where username = :username]]> 
+    </query>
+    
+    <query name="USER_LoginCheckUsername">
+        <![CDATA[select count(*) from Userregister where username = :username]]>      
+    </query>
+    
+    <query name="USER_LoadDocAppointmentTable">
+        <![CDATA[from Userdoctorapp]]>
+    </query>
+    
+    <query name="USER_DeleteDocAppointmentTable">
+        <![CDATA[delete from Userdoctorapp where appId = :ID]]>
+    </query>
+    
+    <query name="USER_LoadTodayAppointments">
+        <![CDATA[from Userdoctorapp where date = CURRENT_DATE()]]>
+    </query>
+    
+    <query name="USER_LoadHealthInfoTable">
+        <![CDATA[from Userhealthinfo]]>
+    </query>
+    
+    <query name="USER_DeleteHealthInfoTable">
+        <![CDATA[delete from Userhealthinfo where memberId = :ID]]>
+    </query>
+    
+    <query name="USER_CountMembername">
+        <![CDATA[select count(*) from Userhealthinfo where memberName = :memberName]]>      
+    </query>
+    
+    <query name="USER_LoadVehicleServiceTable">
+        <![CDATA[from Uservehicle]]>
+    </query>
+    
+    <query name="USER_DeleteVehicleServiceTable">
+        <![CDATA[delete from Uservehicle where serviceId = :ID]]>
+    </query>
+    
+    <query name="USER_CountUsername">
+        <![CDATA[select count(*) from Userinfo where username = :username]]>      
+    </query>
+
+    <query name="USER_LoadUserInfo">
+        <![CDATA[from Userinfo where username = :username]]>
+    </query>
+    
+    
+    <!-- ***********************food ******************************* -->
+    
+    <query name="FOOD_delete">
+        <![CDATA[delete from Homefood where foodId = :ID]]>
+    </query>
+    
+    <query name="Food_LoadSearchTable_ALL">
+        <![CDATA[from Homefood]]>
+    </query>
+    
+    <query name="Food_LoadItemTable">
+        <![CDATA[from Homefood where catagory = :catagory]]> 
+    </query>
+    
+    <query name="Food_LoadExpireTable">
+        <![CDATA[from Homefood WHERE date <= DateAdd( day ,5 , GetDate() )]]>
+    </query>
+   
+   <!-- ***********************room******************************* -->
+   
+   <query name="ROOM_delete">
+        <![CDATA[delete from Homerooms where id = :ID]]>
+    </query>
+    
+    <query name="Room_LoadSearchTable_ALL">
+        <![CDATA[from Homerooms]]>
+    </query>
+    
+    
+    <!-->Electrical Goods Queries  <-->
+    
+    <query name="INVENTORY_searchElectricGoodByItemCode">
+        <![CDATA[Select name,location,qty,user,inputPower,brand,nameOfTheSeller,date,price,paymentMethod,paymentPeriod from ElectricalGoods where itemCode= :itemCode]]>
+    </query>
+
+    <query name="INVENTORY_searchElectricGoodByName">
+        <![CDATA[Select itemCode,location,qty,user,inputPower,brand,nameOfTheSeller,date,price,paymentMethod,paymentPeriod from ElectricalGoods where name= :name]]>
+    </query>
+    
+    <query name="INVENTORY_searchElectricGoodByNameAndLocation">
+        <![CDATA[Select itemCode,qty,user,inputPower,brand,nameOfTheSeller,date,price,paymentMethod,paymentPeriod from ElectricalGoods where name= :name AND location= :location]]>
+    </query>
+        
+    <query name="INVENTORY_searchElectricGoodByNameOfSeller">
+        <![CDATA[Select itemCode,name,location,qty,user,inputPower,brand,date,price,paymentMethod,paymentPeriod from ElectricalGoods where nameOfTheSeller= :nameOfTheSeller]]>
+    </query>
+    
+    <query name="INVENTORY_searchElectricGoodByNameAndNameOfSeller">
+        <![CDATA[Select itemCode,location,qty,user,inputPower,brand,nameOfTheSeller,date,price,paymentMethod,paymentPeriod from ElectricalGoods where name= :name AND nameOfTheSeller= :nameOfTheSeller]]>
+    </query>    
+    
+    <query name="INVENTORY_searchElectricGoodByBrand">
+        <![CDATA[Select itemCode,name,location,qty,user,inputPower,nameOfTheSeller,date,price,paymentMethod,paymentPeriod from ElectricalGoods where brand= :brand]]>
+    </query>
+    
+     <query name="INVENTORY_getAllElectricGoodList_1">
+        <![CDATA[Select name,location,qty,user,inputPower,brand,nameOfTheSeller,date,price,paymentMethod,paymentPeriod from ElectricalGoods]]>
+    </query>
+    
+    <query name="INVENTORY_getAllElectricGoodList_2">
+        <![CDATA[Select itemCode,name,location,qty,user,inputPower,brand,nameOfTheSeller,date,price,paymentMethod,paymentPeriod from ElectricalGoods]]>
+    </query>
+    
+    <query name="INVENTORY_deleteElectricItem">
+        <![CDATA[Delete From ElectricalGoods where itemCode= :itemCode]]>
+    </query>
+   
+    <query name="INVENTORY_getElectricItemName">
+        <![CDATA[Select DISTINCT name From ElectricalGoods]]>
+    </query>
+    
+    <query name="INVENTORY_getElectricItemNameByItemCode">
+        <![CDATA[Select name From ElectricalGoods where itemCode=:itemCode]]>
+    </query>
+    
+    <query name="INVENTORY_getInstallmentPaymentNotificationOfElectricItem">
+        <![CDATA[Select itemCode,name,qty,brand,nameOfTheSeller,price,paymentPeriod from ElectricalGoods where YEAR(date)<=YEAR(CURDATE()) AND DAYOFMONTH(date)=DAYOFMONTH(CURDATE())+7 AND paymentMethod !='In Cash']]>
+    </query>
+    
+    <query name="INVENTORY_getInstallmentPaymentNotificationCountOfElectricItem">
+        <![CDATA[Select COUNT(itemCode) from ElectricalGoods where YEAR(date)<=YEAR(CURDATE()) AND DAYOFMONTH(date)=DAYOFMONTH(CURDATE())+7 AND paymentMethod !='In Cash']]>
+    </query>
+    
+    <query name="INVENTORY_getElectricItemLocation">
+        <![CDATA[Select DISTINCT location From ElectricalGoods]]>
+    </query>
+    
+     <query name="INVENTORY_getElectricItemCode">
+        <![CDATA[Select itemCode From ElectricalGoods]]>
+    </query>
+    
+    <query name="INVENTORY_getElectricItemSellers">
+        <![CDATA[Select DISTINCT nameOfTheSeller From ElectricalGoods]]>
+    </query>
+    
+     <query name="INVENTORY_getElectricItemBrand">
+        <![CDATA[Select DISTINCT brand From ElectricalGoods]]>
+     </query>
+    
+        <!-->Furnitre Queries  <-->
+    
+    <query name="INVENTORY_searchFurnitureByItemCode">
+        <![CDATA[Select name,location,qty,user,date,price,paymentMethod,warrantyPeriod,nameOfSeller,paymentPeriod from Furniture where itemCode= :itemCode]]>
+    </query>
+
+    <query name="INVENTORY_searchFurnitureByName">
+        <![CDATA[Select itemCode,location,qty,user,date,price,paymentMethod,warrantyPeriod,nameOfSeller,paymentPeriod from Furniture where name= :name]]>
+    </query>
+    
+    <query name="INVENTORY_searchFurnitureByNameAndLocation">
+        <![CDATA[Select itemCode,qty,user,date,price,paymentMethod,warrantyPeriod,nameOfSeller,paymentPeriod from Furniture where name= :name AND location= :location]]>
+    </query>
+    
+    <query name="INVENTORY_searchFurnitureByNameOfTheSeller">
+        <![CDATA[Select itemCode,name,location,qty,user,date,price,paymentMethod,warrantyPeriod,paymentPeriod from Furniture where nameOfSeller= :nameOfSeller]]>
+    </query>
+    
+    <query name="INVENTORY_searchFurnitureByNameAndNameOfTheSeller">
+        <![CDATA[Select itemCode,location,qty,user,date,price,paymentMethod,warrantyPeriod,paymentPeriod from Furniture where name= :name AND nameOfSeller= :nameOfSeller]]>
+    </query>
+        
+     <query name="INVENTORY_getAllFurnitureList_1">
+        <![CDATA[Select name,location,qty,user,date,price,paymentMethod,warrantyPeriod,nameOfSeller,paymentPeriod from Furniture]]>
+    </query>
+    
+    <query name="INVENTORY_getAllFurnitureList_2">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,paymentMethod,warrantyPeriod,nameOfSeller,paymentPeriod from Furniture]]>
+    </query>
+    
+    <query name="INVENTORY_getInstallmentPaymentNotificationOfFurniture">
+        <![CDATA[Select itemCode,name,qty,nameOfSeller,price,paymentPeriod from Furniture where YEAR(date)<=YEAR(CURDATE()) AND DAYOFMONTH(date)=DAYOFMONTH(CURDATE())+7 AND paymentMethod !='In Cash']]>
+    </query>
+    
+    <query name="INVENTORY_getInstallmentPaymentNotificationCountOfFurniture">
+        <![CDATA[Select COUNT(itemCode) from Furniture where YEAR(date)<=YEAR(CURDATE()) AND DAYOFMONTH(date)=DAYOFMONTH(CURDATE())+7 AND paymentMethod !='In Cash']]>
+    </query>
+    
+    <query name="INVENTORY_deleteFurniture">
+        <![CDATA[Delete From Furniture where itemCode= :itemCode]]>
+    </query>
+   
+    <query name="INVENTORY_getFurnitureName">
+        <![CDATA[Select DISTINCT name From Furniture]]>
+    </query>
+    
+    <query name="INVENTORY_getFurnitureLocation">
+        <![CDATA[Select DISTINCT location From Furniture]]>
+    </query>
+    
+    <query name="INVENTORY_getFurnitureItemCode">
+        <![CDATA[Select itemCode From Furniture]]>
+    </query>
+    
+    <query name="INVENTORY_getFurnitureSellers">
+        <![CDATA[Select DISTINCT nameOfSeller From Furniture]]>
+    </query>
+    
+    <!-->Book Queries  <-->
+    
+    <query name="INVENTORY_searchBookByItemCode">
+        <![CDATA[Select name,location,qty,price,user,author,publisher,nameOfTheSeller,returnDate,category,stream from Book where itemCode=:itemCode]]>
+    </query>
+
+    <query name="INVENTORY_searchBookByName">
+        <![CDATA[Select itemCode,location,qty,price,user,author,publisher,nameOfTheSeller,returnDate,category,stream from Book where name=:name]]>
+    </query>
+    
+    <query name="INVENTORY_searchBookByCategory">
+        <![CDATA[Select itemCode,name,location,qty,price,user,author,publisher,nameOfTheSeller,returnDate,stream from Book where category=:category]]>
+    </query>
+    
+    <query name="INVENTORY_searchBookByNameOfTheSeller">
+        <![CDATA[Select itemCode,name,location,qty,price,user,author,publisher,returnDate,category,stream from Book where nameOfTheSeller=:nameOfTheSeller]]>
+    </query>
+    
+    <query name="INVENTORY_searchBookByNameAndLocation">
+        <![CDATA[Select itemCode,qty,price,user,author,publisher,nameOfTheSeller,returnDate,category,stream from Book where name=:name AND location=:location]]>
+    </query>
+    
+    <query name="INVENTORY_searchBookByNameAndNameOfTheSeller">
+        <![CDATA[Select itemCode,location,qty,price,user,author,publisher,returnDate,category,stream from Book where name=:name AND nameOfTheSeller=:nameOfTheSeller]]>
+    </query>
+        
+     <query name="INVENTORY_getAllBookList_1">
+        <![CDATA[Select name,location,qty,price,user,author,publisher,nameOfTheSeller,returnDate,category,stream from Book]]>
+    </query>
+    
+    <query name="INVENTORY_getAllBookList_2">
+        <![CDATA[Select itemCode,name,location,qty,price,user,author,publisher,nameOfTheSeller,returnDate,category,stream from Book]]>
+    </query>
+    
+    <query name="INVENTORY_deleteBook">
+        <![CDATA[Delete From Book where itemCode=:itemCode]]>
+    </query>
+    
+    <query name="INVENTORY_getBookName">
+        <![CDATA[Select DISTINCT name From Book]]>
+    </query>
+    
+    <query name="INVENTORY_getBookLocation">
+        <![CDATA[Select DISTINCT location From Book]]>
+    </query>
+ 
+    <query name="INVENTORY_getBookSellers">
+        <![CDATA[Select DISTINCT nameOfTheSeller From Book]]>
+    </query>
+    
+    <query name="INVENTORY_getBookCategory">
+        <![CDATA[Select DISTINCT category From Book]]>
+    </query>
+    
+        <!-->Other Item Queries  <-->
+
+    <query name="INVENTORY_searchOtherItemByItemCode">
+        <![CDATA[Select name,location,qty,price,user,date,description,usage from Otheritem where itemCode=:itemCode]]>
+    </query>
+
+    <query name="INVENTORY_searchOtherItemByName">
+        <![CDATA[Select itemCode,location,qty,price,user,date,usage from Otheritem where name=:name]]>
+    </query>
+    
+   <query name="INVENTORY_searchOtherItemByUsage">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,description from Otheritem where usage=:usage]]>
+    </query>
+    
+    <query name="INVENTORY_searchOtherItemByNameAndLocation">
+        <![CDATA[Select itemCode,qty,price,user,date,description,usage from Otheritem where name=:name AND location=:location]]>
+    </query>
+        
+     <query name="INVENTORY_getAllOtherItemList_1">
+        <![CDATA[Select name,location,qty,price,user,date,description,usage from Otheritem]]>
+    </query>
+    
+    <query name="INVENTORY_getAllOtherItemList_2">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,description,usage from Otheritem]]>
+    </query>
+    
+    <query name="INVENTORY_deleteOtherItem">
+        <![CDATA[Delete From Otheritem where itemCode=:itemCode]]>
+    </query>
+    
+    <query name="INVENTORY_getOtherItemName">
+        <![CDATA[Select DISTINCT name From Otheritem]]>
+    </query>
+    
+    <query name="INVENTORY_getOtherItemLocation">
+        <![CDATA[Select DISTINCT location From Otheritem]]>
+    </query>
+    
+    <query name="INVENTORY_getOtherItemItemCode">
+        <![CDATA[Select itemCode From Otheritem]]>
+    </query>
+    
+    <query name="INVENTORY_getOtherItemUsage">
+        <![CDATA[Select DISTINCT usage From Otheritem]]>
+    </query>
+    
+    <!-->Medicine Queries  <-->
+    
+    <query name="INVENTORY_searchMedicineByItemCode">
+        <![CDATA[Select name,location,qty,price,user,date,nameOfDoctor,description,expDate,nameOfSeller from Medicine where itemCode=:itemCode]]>
+    </query>
+
+    <query name="INVENTORY_searchMedicineByName">
+        <![CDATA[Select itemCode,location,qty,price,user,date,nameOfDoctor,description,expDate,nameOfSeller from Medicine where name=:name]]>
+    </query>
+    
+    <query name="INVENTORY_searchMedicineByNameOfSeller">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,nameOfDoctor,description,expDate from Medicine where nameOfSeller=:nameOfSeller]]>
+    </query>
+    
+    <query name="INVENTORY_searchMedicineByDescription">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,nameOfDoctor,expDate,nameOfSeller from Medicine where description=:description]]>
+    </query>
+    
+    <query name="INVENTORY_searchMedicineByNameAndLocation">
+        <![CDATA[Select itemCode,qty,price,user,date,nameOfDoctor,description,expDate,nameOfSeller from Medicine where name=:name AND location=:location]]>
+    </query>
+    
+    <query name="INVENTORY_searchMedicineByNameAndNameOfSeller">
+        <![CDATA[Select itemCode,location,qty,price,user,date,nameOfDoctor,description,expDate from Medicine where name=:name AND nameOfSeller=:nameOfSeller]]>
+    </query>
+        
+     <query name="INVENTORY_getAllMedicineList_1">
+        <![CDATA[Select name,location,qty,price,user,date,nameOfDoctor,description,expDate,nameOfSeller from Medicine]]>
+    </query>
+    
+    <query name="INVENTORY_getAllMedicineList_2">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,nameOfDoctor,description,expDate,nameOfSeller from Medicine]]>
+    </query>
+    
+    <query name="INVENTORY_deleteMedicine">
+        <![CDATA[Delete From Medicine where itemCode=:itemCode]]>
+    </query>
+    
+    <query name="INVENTORY_getExpiringMedicine">
+        <![CDATA[Select itemCode,name,qty,price,nameOfDoctor,description,expDate,nameOfSeller From Medicine where MONTH(expDate) = MONTH(CURDATE()) AND DAYOFMONTH(expDate) = DAYOFMONTH(CURDATE())+7]]>
+    </query>
+    
+   <query name="INVENTORY_getExpiringMedicineCount">
+        <![CDATA[Select COUNT(itemCode) From Medicine where MONTH(expDate) = MONTH(CURDATE()) AND DAYOFMONTH(expDate) = DAYOFMONTH(CURDATE())+7]]>
+    </query>
+    
+    <query name="INVENTORY_getMedicineName">
+        <![CDATA[Select DISTINCT name From Medicine]]>
+    </query>
+    
+    <query name="INVENTORY_getMedicineLocation">
+        <![CDATA[Select DISTINCT location From Medicine]]>
+    </query>
+
+    <query name="INVENTORY_getMedicineDescription">
+        <![CDATA[Select DISTINCT description From Medicine]]>
+    </query>
+    
+    <query name="INVENTORY_getMedicineSellers">
+        <![CDATA[Select DISTINCT nameOfSeller From Medicine]]>
+    </query>
+    
+    <!-->Garment And Accesory Queries  <-->
+    
+    <query name="INVENTORY_searchGarmentAndAccessoriesByItemCode">
+        <![CDATA[Select name,location,qty,price,user,date,nameOfTheSeller,brand,category from Garmentandaccesory where itemCode=:itemCode]]>
+    </query>
+
+    <query name="INVENTORY_searchGarmentAndAccessoriesByName">
+        <![CDATA[Select itemCode,location,qty,price,user,date,nameOfTheSeller,brand,category from Garmentandaccesory where name=:name]]>
+    </query>
+    
+    <query name="INVENTORY_searchGarmentAndAccessoriesByNameOfSeller">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,brand,category from Garmentandaccesory where nameOfTheSeller=:nameOfTheSeller]]>
+    </query>
+    
+    <query name="INVENTORY_searchGarmentAndAccessoriesByNameAndLocation">
+        <![CDATA[Select itemCode,qty,price,user,date,nameOfTheSeller,brand,category from Garmentandaccesory where name=:name AND location=:location]]>
+    </query>
+    
+    <query name="INVENTORY_searchGarmentAndAccessoriesByNameAndNameOfSeller">
+        <![CDATA[Select itemCode,location,qty,price,user,date,brand,category from Garmentandaccesory where name=:name AND nameOfTheSeller=:nameOfTheSeller]]>
+    </query>
+        
+     <query name="INVENTORY_getAllGarmentAndAccessoriesList_1">
+        <![CDATA[Select name,location,qty,price,user,date,nameOfTheSeller,brand,category from Garmentandaccesory]]>
+    </query>
+    
+    <query name="INVENTORY_getAllGarmentAndAccessoriesList_2">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,nameOfTheSeller,brand,category from Garmentandaccesory]]>
+    </query>
+    
+    <query name="INVENTORY_deleteGarmentAndAccessories">
+        <![CDATA[Delete From Garmentandaccesory where itemCode=:itemCode]]>
+    </query>
+    
+    <query name="INVENTORY_getGarmentAndAccessoryName">
+        <![CDATA[Select DISTINCT name From Garmentandaccesory]]>
+    </query>
+    
+    <query name="INVENTORY_getGarmentAndAccessoryLocation">
+        <![CDATA[Select DISTINCT location From Garmentandaccesory]]>
+    </query>
+    
+    <query name="INVENTORY_getGarmentAndAccessorySellers">
+        <![CDATA[Select DISTINCT nameOfTheSeller From Garmentandaccesory]]>
+    </query>
+    
+    <query name="INVENTORY_getGarmentAndAccessoryItemCode">
+        <![CDATA[Select itemCode From Garmentandaccesory]]>
+    </query>
+    
+    <!-->Tool Queries  <-->
+    
+    <query name="INVENTORY_searchToolByItemCode">
+        <![CDATA[Select name,location,qty,price,user,date,nameOfTheSeller,warrantyPeriod from Tool where itemCode=:itemCode]]>
+    </query>
+
+    <query name="INVENTORY_searchToolByName">
+        <![CDATA[Select itemCode,location,qty,price,user,date,nameOfTheSeller,warrantyPeriod from Tool where name=:name]]>
+    </query>
+    
+    <query name="INVENTORY_searchToolByNameOfSeller">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,warrantyPeriod from Tool where nameOfTheSeller=:nameOfTheSeller]]>
+    </query>
+    
+    <query name="INVENTORY_searchToolByNameAndLocation">
+        <![CDATA[Select itemCode,qty,price,user,date,nameOfTheSeller,warrantyPeriod from Tool where name=:name AND location=:location]]>
+    </query>
+    
+    <query name="INVENTORY_searchToolByNameAndNameOfSeller">
+        <![CDATA[Select itemCode,location,qty,price,user,date,warrantyPeriod from Tool where name=:name AND nameOfTheSeller=:nameOfTheSeller]]>
+    </query>
+        
+     <query name="INVENTORY_getAllToolList_1">
+        <![CDATA[Select name,location,qty,price,user,date,nameOfTheSeller,warrantyPeriod from Tool]]>
+    </query>
+    
+    <query name="INVENTORY_getAllToolList_2">
+        <![CDATA[Select itemCode,name,location,qty,price,user,date,nameOfTheSeller,warrantyPeriod from Tool]]>
+    </query>
+    
+    <query name="INVENTORY_deleteTool">
+        <![CDATA[Delete From Tool where itemCode=:itemCode]]>
+    </query>
+    
+    <query name="INVENTORY_getToolName">
+        <![CDATA[Select DISTINCT name From Tool]]>
+    </query>
+    
+    <query name="INVENTORY_getToolLocation">
+        <![CDATA[Select DISTINCT location From Tool]]>
+    </query>
+    
+     <query name="INVENTORY_getToolSellers">
+        <![CDATA[Select DISTINCT nameOfTheSeller From Tool]]>
+    </query>
+    
+    <query name="INVENTORY_getToolItemCode">
+        <![CDATA[Select itemCode From Tool]]>
+    </query>
+    
+     <!-->Current ItemCode Reciever Quaries  <-->
+          <query name="INVENTORY_getCurrentItemCodeElectricGoods">
+          <![CDATA[Select itemCode From ElectricalGoods ORDER BY 1 DESC]]>
+          </query> 
+       
+          <query name="INVENTORY_getCurrentItemCodeFurniture">
+          <![CDATA[Select itemCode From Furniture ORDER BY 1 DESC]]>
+          </query>
+          
+           <query name="INVENTORY_getCurrentItemCodeBook">
+            <![CDATA[Select itemCode From Book ORDER BY 1 DESC]]>
+            </query>
+            
+           <query name="INVENTORY_getCurrentItemCodeTool">
+                <![CDATA[Select itemCode From Tool ORDER BY 1 DESC]]>
+          </query>
+          
+           <query name="INVENTORY_getCurrentItemCodeGarmentAndAccessory">
+             <![CDATA[Select itemCode From Garmentandaccesory ORDER BY 1 DESC]]>
+           </query>
+           
+           <query name="INVENTORY_getCurrentItemCodeOtherItem">
+                <![CDATA[Select itemCode From Otheritem ORDER BY 1 DESC]]>
+          </query>
+          
+           <query name="INVENTORY_getCurrentItemCodeMedicine">
+                <![CDATA[Select itemCode From Medicine ORDER BY 1 DESC]]>
+          </query>
+          
+         <query name="INVENTORY_getCurrentItemCodeRepair">
+                <![CDATA[Select repairId From Repair ORDER BY 1 DESC]]>
+          </query>
+          
+          <query name="INVENTORY_getCurrentItemCodeTechnician">
+                <![CDATA[Select technicianId From Technician ORDER BY 1 DESC]]>
+          </query>
+          
+ <!-->Repairs Queries  <-->
+  
+        <query name="INVENTORY_searchRepairByItemCode">
+            <![CDATA[Select name,techicianId,techName,dateOfRepairing,payment,description,category,returnDate from Repair where itemCode= :itemCode]]>
+        </query>
+        
+        <query name="INVENTORY_searchRepairByCategory">
+            <![CDATA[Select itemCode,name,techicianId,techName,dateOfRepairing,payment,description,returnDate from Repair where category= :category]]>
+        </query>
+
+        <query name="INVENTORY_searchRepairByName">
+            <![CDATA[Select itemCode,techName,dateOfRepairing,payment,description,category,returnDate from Repair where name= :name]]>
+        </query>
+
+        <query name="INVENTORY_searchRepairByTechnician">
+            <![CDATA[Select itemCode,name,dateOfRepairing,payment,description,category,returnDate from Repair where techName=:technicianName]]>
+        </query>
+        
+        <query name="INVENTORY_searchRepairByDate">
+            <![CDATA[Select itemCode,name,techName,payment,description,category,returnDate from Repair where dateOfRepairing=:repairDate]]>
+        </query>
+        
+         <query name="INVENTORY_searchRepairByNameAndTechnician">
+            <![CDATA[Select itemCode,name,dateOfRepairing,payment,description,category,returnDate from Repair where name=:name And techName=:technicianName]]>
+        </query>
+        
+         <query name="INVENTORY_searchRepairByNameAndCategory">
+            <![CDATA[Select itemCode,techicianId,techName,dateOfRepairing,payment,description,returnDate from Repair where name= :name And category=:category]]>
+        </query>
+
+         <query name="INVENTORY_getAllRepairList_1">
+            <![CDATA[Select name,techicianId,techName,dateOfRepairing,payment,description,category,returnDate from Repair]]>
+        </query>
+
+        <query name="INVENTORY_getAllRepairList_2">
+            <![CDATA[Select repairId,itemCode,name,techicianId,techName,dateOfRepairing,payment,description,category,returnDate from Repair]]>
+        </query>
+        
+        <query name="INVENTORY_getRepairingItemList">
+            <![CDATA[Select itemCode from Repair where category=:category]]>
+        </query>
+        
+         <query name="INVENTORY_getRepairingNameList">
+            <![CDATA[Select Distinct name from Repair where category=:category]]>
+        </query>
+
+        <query name="INVENTORY_deleteRepair">
+            <![CDATA[Delete From Repair where itemCode= :itemCode]]>
+        </query>
+        
+        <query name="INVENTORY_getMonthlyRepairCount">
+            <![CDATA[Select COUNT(repairID) From Repair where MONTH(returnDate) = MONTH(CURDATE())]]>
+        </query>
+        
+        <query name="INVENTORY_getMonthlyRepair">
+            <![CDATA[Select repairId,itemCode,name,techName,dateOfRepairing,payment,description,category,returnDate From Repair Where  MONTH(returnDate) = MONTH(CURDATE())]]>
+        </query>
+        
+         <query name="INVENTORY_getReturnRepairCount">
+            <![CDATA[Select COUNT(repairID) From Repair where returnDate = CURDATE()]]>
+        </query>
+        
+        <query name="INVENTORY_getReturnRepair">
+            <![CDATA[Select repairId,itemCode,name,techName,dateOfRepairing,payment,description,category,returnDate From Repair Where returnDate = CURDATE()]]>
+        </query>
+
+<!-->Technician Queries  <-->
+
+     <query name="INVENTORY_getTechnicianName">
+            <![CDATA[Select DISTINCT name From Technician]]>
+        </query>
+
+        <query name="INVENTORY_getTechnicianDetails">
+            <![CDATA[Select technicianId,address,mobileNo,officeNo from Technician where name=:name]]>
+        </query>
+        
+         <query name="INVENTORY_deleteTecnician">
+            <![CDATA[Delete From Technician where technicianId= :technicianID]]>
+        </query>
+
+</hibernate-mapping>

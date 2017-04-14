@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2016 4:10:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.user.Userinfo" table="userinfo" catalog="sep" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="userID" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="30" not-null="true" />
+        </property>
+        <property name="initials" type="string">
+            <column name="initials" length="30" not-null="true" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="firstName" length="30" not-null="true" />
+        </property>
+        <property name="middleName" type="string">
+            <column name="middleName" length="30" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="lastName" length="30" not-null="true" />
+        </property>
+        <property name="nic" type="string">
+            <column name="NIC" length="10" not-null="true" />
+        </property>
+        <property name="dob" type="date">
+            <column name="DOB" length="10" not-null="true" />
+        </property>
+        <property name="telephone1" type="string">
+            <column name="telephone1" length="10" />
+        </property>
+        <property name="telephone2" type="string">
+            <column name="telephone2" length="10" />
+        </property>
+        <property name="mobile1" type="string">
+            <column name="mobile1" length="10" />
+        </property>
+        <property name="mobile2" type="string">
+            <column name="mobile2" length="10" />
+        </property>
+        <property name="email1" type="string">
+            <column name="email1" length="50" />
+        </property>
+        <property name="email2" type="string">
+            <column name="email2" length="50" />
+        </property>
+        <property name="companyName" type="string">
+            <column name="companyName" length="30" />
+        </property>
+        <property name="companyAddress" type="string">
+            <column name="companyAddress" length="300" />
+        </property>
+        <property name="companyTelephone" type="string">
+            <column name="companyTelephone" length="10" />
+        </property>
+        <property name="companyFax" type="string">
+            <column name="companyFax" length="10" />
+        </property>
+        <property name="companyEmail" type="string">
+            <column name="companyEmail" length="50" />
+        </property>
+        <property name="companyWebsite" type="string">
+            <column name="companyWebsite" length="30" />
+        </property>
+        <property name="vehicleNo1" type="string">
+            <column name="vehicleNo1" length="15" />
+        </property>
+        <property name="vehicleNo2" type="string">
+            <column name="vehicleNo2" length="15" />
+        </property>
+        <property name="licenceNo" type="string">
+            <column name="licenceNo" length="30" />
+        </property>
+        <property name="passportNo" type="string">
+            <column name="passportNo" length="30" />
+        </property>
+        <property name="passportIssuedOn" type="date">
+            <column name="passportIssuedOn" length="10" />
+        </property>
+        <property name="passportRenewedOn" type="date">
+            <column name="passportRenewedOn" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

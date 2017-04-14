@@ -1,0 +1,14 @@
+View.Inventory.Book.DeleteBook$3
+View.Inventory.Book.DeleteBook$2
+View.Inventory.Book.DeleteBook$5
+View.Inventory.Book.DeleteBook$4
+View.Inventory.Book.DeleteBook$1
+View.Inventory.Book.DeleteBook$10
+View.Inventory.Book.DeleteBook$12
+View.Inventory.Book.DeleteBook$11
+View.Inventory.Book.DeleteBook
+View.Inventory.Book.DeleteBook$7
+View.Inventory.Book.DeleteBook$6
+View.Inventory.Book.DeleteBook$13
+View.Inventory.Book.DeleteBook$9
+View.Inventory.Book.DeleteBook$8

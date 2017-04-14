@@ -1,0 +1,16 @@
+View.Inventory.ElectricGoods.UpdateElectricGoods$1
+View.Inventory.ElectricGoods.UpdateElectricGoods$3
+View.Inventory.ElectricGoods.UpdateElectricGoods$2
+View.Inventory.ElectricGoods.UpdateElectricGoods
+View.Inventory.ElectricGoods.UpdateElectricGoods$15
+View.Inventory.ElectricGoods.UpdateElectricGoods$5
+View.Inventory.ElectricGoods.UpdateElectricGoods$14
+View.Inventory.ElectricGoods.UpdateElectricGoods$4
+View.Inventory.ElectricGoods.UpdateElectricGoods$13
+View.Inventory.ElectricGoods.UpdateElectricGoods$7
+View.Inventory.ElectricGoods.UpdateElectricGoods$12
+View.Inventory.ElectricGoods.UpdateElectricGoods$6
+View.Inventory.ElectricGoods.UpdateElectricGoods$11
+View.Inventory.ElectricGoods.UpdateElectricGoods$9
+View.Inventory.ElectricGoods.UpdateElectricGoods$10
+View.Inventory.ElectricGoods.UpdateElectricGoods$8

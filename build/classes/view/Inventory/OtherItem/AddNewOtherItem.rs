@@ -1,0 +1,14 @@
+View.Inventory.OtherItem.AddNewOtherItem$1
+View.Inventory.OtherItem.AddNewOtherItem$3
+View.Inventory.OtherItem.AddNewOtherItem$2
+View.Inventory.OtherItem.AddNewOtherItem$5
+View.Inventory.OtherItem.AddNewOtherItem$4
+View.Inventory.OtherItem.AddNewOtherItem$13
+View.Inventory.OtherItem.AddNewOtherItem$7
+View.Inventory.OtherItem.AddNewOtherItem$6
+View.Inventory.OtherItem.AddNewOtherItem$10
+View.Inventory.OtherItem.AddNewOtherItem$9
+View.Inventory.OtherItem.AddNewOtherItem$11
+View.Inventory.OtherItem.AddNewOtherItem$8
+View.Inventory.OtherItem.AddNewOtherItem$12
+View.Inventory.OtherItem.AddNewOtherItem

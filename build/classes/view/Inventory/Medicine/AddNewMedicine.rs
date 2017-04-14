@@ -1,0 +1,14 @@
+View.Inventory.Medicine.AddNewMedicine$1
+View.Inventory.Medicine.AddNewMedicine$12
+View.Inventory.Medicine.AddNewMedicine$11
+View.Inventory.Medicine.AddNewMedicine$10
+View.Inventory.Medicine.AddNewMedicine$13
+View.Inventory.Medicine.AddNewMedicine
+View.Inventory.Medicine.AddNewMedicine$7
+View.Inventory.Medicine.AddNewMedicine$6
+View.Inventory.Medicine.AddNewMedicine$9
+View.Inventory.Medicine.AddNewMedicine$8
+View.Inventory.Medicine.AddNewMedicine$3
+View.Inventory.Medicine.AddNewMedicine$2
+View.Inventory.Medicine.AddNewMedicine$5
+View.Inventory.Medicine.AddNewMedicine$4

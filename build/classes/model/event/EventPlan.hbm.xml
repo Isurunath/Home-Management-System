@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2016 3:39:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.event.EventPlan" table="EventPlan" catalog="SEP">
+        <id name="eventId" type="java.lang.Integer">
+            <column name="EventID" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="20" not-null="true" />
+        </property>
+        <property name="date" type="date">
+            <column name="Date" length="10" not-null="true" />
+        </property>
+        <property name="startTime" type="string">
+            <column name="StartTime" length="10" not-null="true" />
+        </property>
+        <property name="endTime" type="string">
+            <column name="EndTime" length="100" not-null="true" />
+        </property>
+        <property name="location" type="string">
+            <column name="Location" length="20" not-null="true" />
+        </property>
+        <property name="nop" type="int">
+            <column name="NOP" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

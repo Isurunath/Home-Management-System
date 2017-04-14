@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 2, 2016 4:10:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.user.Uservehicle" table="uservehicle" catalog="sep">
+        <id name="serviceId" type="java.lang.Integer">
+            <column name="serviceID" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="date" type="date">
+            <column name="date" length="10" not-null="true" />
+        </property>
+        <property name="time" type="string">
+            <column name="time" length="20" not-null="true" />
+        </property>
+        <property name="vehicleNo" type="string">
+            <column name="vehicleNo" length="20" not-null="true" />
+        </property>
+        <property name="stationName" type="string">
+            <column name="stationName" length="50" not-null="true" />
+        </property>
+        <property name="stationAddress" type="string">
+            <column name="stationAddress" length="300" not-null="true" />
+        </property>
+        <property name="other" type="string">
+            <column name="other" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

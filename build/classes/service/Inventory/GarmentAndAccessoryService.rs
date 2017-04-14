@@ -1,0 +1,1 @@
+services.Inventory.GarmentAndAccessoryService

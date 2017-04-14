@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2016 3:39:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.plan.Homeplan" table="homeplan" catalog="sep">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="20" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="50" not-null="true" />
+        </property>
+        <property name="contact1" type="string">
+            <column name="Contact1" length="10" not-null="true" />
+        </property>
+        <property name="contact2" type="string">
+            <column name="Contact2" length="10" not-null="true" />
+        </property>
+        <property name="owner" type="string">
+            <column name="Owner" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

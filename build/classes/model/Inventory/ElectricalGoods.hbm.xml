@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 3, 2016 11:17:18 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Inventory.ElectricalGoods" table="electrical_goods" catalog="sep" optimistic-lock="version">
+        <id name="itemCode" type="string">
+            <column name="ItemCode" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="100" not-null="true" />
+        </property>
+        <property name="location" type="string">
+            <column name="Location" length="100" not-null="true" />
+        </property>
+        <property name="qty" type="int">
+            <column name="Qty" not-null="true" />
+        </property>
+        <property name="user" type="string">
+            <column name="User" length="100" not-null="true" />
+        </property>
+        <property name="inputPower" type="string">
+            <column name="InputPower" length="100" not-null="true" />
+        </property>
+        <property name="brand" type="string">
+            <column name="Brand" length="100" />
+        </property>
+        <property name="nameOfTheSeller" type="string">
+            <column name="NameOfTheSeller" length="100" not-null="true" />
+        </property>
+        <property name="date" type="string">
+            <column name="Date" length="100" not-null="true" />
+        </property>
+        <property name="price" type="double">
+            <column name="Price" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="paymentMethod" type="string">
+            <column name="PaymentMethod" length="100" not-null="true" />
+        </property>
+        <property name="paymentPeriod" type="int">
+            <column name="PaymentPeriod" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="Status" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>
